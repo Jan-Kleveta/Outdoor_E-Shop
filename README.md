@@ -8,7 +8,7 @@ The project demonstrates a **modular, scalable microservice architecture**, incl
 ## Project Overview
 
 This project was developed as part of my **Bachelor’s Thesis at the Czech Technical University in Prague (CTU FEL, 2025)**.  
-It implements a **minimal viable product (MVP)** of an e-shop for outdoor clothing, supporting:
+It implements a **minimum viable product (MVP)** of an e-shop for outdoor clothing, supporting:
 
 - Product browsing and administration  
 - Order creation and management  
@@ -20,17 +20,18 @@ It implements a **minimal viable product (MVP)** of an e-shop for outdoor clothi
 
 ## Documentation
 
-All analytical documentation, including the **business goals**, the **requirements specification** and detailed description of diagrams presented in this README is available in the full thesis document [`thesis.pdf`](./thesis.pdf) included in this repository.
-The diagram below shows defined Use-Cases to briefly outline functionalities od developed system.
+All analytical documentation, including the **business goals**, **requirements specification** and a detailed description of the diagrams presented in this README, is available in the full thesis document [`thesis.pdf`](./thesis.pdf) included in this repository.  
 
+### Use Cases
+The diagram below shows defined use cases to briefly outline the functionalities of the developed system.
 
 <img width="1773" height="811" alt="Use-Case-Diagrams" src="https://github.com/user-attachments/assets/869625cb-d72e-4c86-8c64-4df16f137df4" />
 
 ---
 
-### Data model
+### Data Model
 
-To cover all defined requirements I have class diagram that I separated into three microservices, as shown on the diagram below.
+To cover all defined use cases and requirements, I created a data model divided into three microservices, as shown in the diagram below.
 
 <img width="1633" height="850" alt="Class-diagram" src="https://github.com/user-attachments/assets/92b341e9-5a68-4087-af41-c6cb2b1067c6" />
 
@@ -39,23 +40,22 @@ To cover all defined requirements I have class diagram that I separated into thr
 ### Component Overview
 
 The components built on top of analytical domain models, together with additional system modules,  
-are illustrated in the **component diagram** above. Their purpose is described below:
+are illustrated in the **component diagram** below.
+
+<img width="1164" height="721" alt="Component-diagram" src="https://github.com/user-attachments/assets/5aea72ec-1ddc-434b-a1d5-5eaf8722fe43" />
 
 The application consists of several backend microservices, an API Gateway, and a React/Next.js frontend.  
 Microservices provide REST APIs and are deployed together using Docker Compose.  
 Each microservice follows a **multi-layered architecture** pattern.
 
-<img width="1164" height="721" alt="Component-diagram" src="https://github.com/user-attachments/assets/5aea72ec-1ddc-434b-a1d5-5eaf8722fe43" />
-
-
-- **Relational DB** – Stores data in three distinct schemas accessed by the `User`, `Product`, and `Order` microservices.
+- **Relational DB** – Stores data in three distinct schemas accessed by the `User`, `Product`, and `Order` microservices.  
 - **User MS** – Provides user account management, authentication, and registration.  
 - **Product MS** – Manages the product catalog and creates Stripe sessions for order payments.  
 - **Order MS** – Handles existing orders and stores new ones based on Stripe webhooks.  
 - **Stripe** – Third-party service responsible for processing and confirming customer payments.  
 - **API Gateway** – Manages authentication and aggregates endpoints from all backend services under a single URL.  
 - **Web Server** – Handles server-side rendering of pages and retrieves data via the API Gateway.  
-- **Client** – Represents the customer’s browser, which fetches pages from the Web Server or directly via the API Gateway in client-side rendering.  
+- **Client** – Represents the customer’s browser, which fetches pages from the Web Server or directly via the API Gateway during client-side rendering.  
 - **Admin Postman** – Represents the Postman tool used by the administrator for API testing and system management.
 
 ---
@@ -63,12 +63,12 @@ Each microservice follows a **multi-layered architecture** pattern.
 ## Technologies Used
 
 ### Backend
-- **Java 21** – Core backend language
-- **Spring Boot 3** – Framework for building modular backend without bolerplate
+- **Java 21** – Core backend language  
+- **Spring Boot 3** – Framework for building modular backends without boilerplate code  
 - **Spring Security + JWT** – Authentication and authorization across services  
 - **Spring Data JPA (Hibernate)** – ORM layer for database access  
 - **PostgreSQL 17** – Relational database with separate schemas for each microservice  
-- **Stripe API** – Payment processing via checkout sessions & webhooks  
+- **Stripe API** – Payment processing via checkout sessions and webhooks  
 - **Spring Cloud Gateway** – Central API gateway handling routing and authentication  
 - **Lombok** – Reduces boilerplate code for entities and DTOs  
 - **Swagger UI** – API documentation for REST endpoints  
@@ -80,16 +80,16 @@ Each microservice follows a **multi-layered architecture** pattern.
 - **Next.js 14** – Framework supporting SSR and CSR for a fast and SEO-friendly UI  
 - **React 18** – Component-based library for building dynamic user interfaces  
 - **TypeScript** – Strong typing for maintainable and safe frontend code  
-- **TanStack** – Data fetsching from beckend
+- **TanStack** – Data fetching from the backend  
 
 ---
 
 ### Tools
-- **Enterprise Architect** Modelling of diagrams for documentation
-- **IntelliJ IDEA** - IDE used for BE development
-- **Webstorm** - IDE used for FE development
+- **Enterprise Architect** – Modeling of diagrams for documentation  
+- **IntelliJ IDEA** – IDE used for backend development  
+- **WebStorm** – IDE used for frontend development  
 - **Git & GitHub** – Version control and repository management (Gitflow workflow)  
 - **Postman** – Manual testing of REST endpoints  
-- **Swagger UI** – Visual documentation of API endpoints
----
+- **Swagger UI** – Visual documentation of API endpoints  
 
+---
