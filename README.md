@@ -40,7 +40,7 @@ Each microservice follows a **multi-layered architecture** pattern (`Controller 
 ### Component Overview
 
 The components built on top of analytical domain models, together with additional system modules,  
-are illustrated in the **component diagram** included in this repository. Their purpose is described below:
+are illustrated in the **component diagram** above. Their purpose is described below:
 
 - **Relational DB** – Stores data in three distinct schemas accessed by the `User`, `Product`, and `Order` microservices. The schemas correspond to the class diagrams described in the thesis.  
 - **User MS** – Provides user account management, authentication, and registration.  
@@ -51,11 +51,6 @@ are illustrated in the **component diagram** included in this repository. Their 
 - **Web Server** – Handles server-side rendering of pages and retrieves data via the API Gateway.  
 - **Client** – Represents the customer’s browser, which fetches pages from the Web Server or directly via the API Gateway in client-side rendering.  
 - **Admin Postman** – Represents the Postman tool used by the administrator for API testing and system management.
-
-<img width="1633" height="850" alt="Class-diagram" src="https://github.com/user-attachments/assets/92b341e9-5a68-4087-af41-c6cb2b1067c6" />
-
-A **detailed description** of the class diagram and component endpoints  
-is available in the full bachelor’s thesis – see [`thesis.pdf`](./thesis.pdf) included in this repository.
 
 ---
 
@@ -84,14 +79,13 @@ is available in the full bachelor’s thesis – see [`thesis.pdf`](./thesis.pdf
 
 ---
 
-### Architecture & Tools
-- **Microservice architecture** – Independent services communicating over REST APIs  
-- **Multi-layered design** – Each service structured as `Controller → Service → Repository`  
-- **Docker bridge network** – Inter-container communication through `app-network`  
+### Tools
+- **IntelliJ IDEA** - IDE used for BE development
+- **Webstorm** - IDE used for FE development
 - **Git & GitHub** – Version control and repository management (Gitflow workflow)  
 - **Postman** – Manual testing of REST endpoints  
-- **Swagger UI** – Visual documentation of API endpoints  
+- **Swagger UI** – Visual documentation of API endpoints
+- **Enterprise Architect** Modelling of diagrams for documentation
 
 ---
 
-✅ *The system combines Java Spring Boot microservices, a modern Next.js frontend, and Dockerized deployment — ensuring scalability, modularity, and clean architecture.*
