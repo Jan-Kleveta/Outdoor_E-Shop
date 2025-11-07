@@ -16,6 +16,8 @@ It implements a **minimal viable product (MVP)** of an e-shop for outdoor clothi
 - Secure payments via **Stripe**  
 - Scalable, containerized microservices using **Docker**
 
+---
+
 ## SW Analysis
 
 All analytical documentation, including the **goals** and the **requirements specification**,  
