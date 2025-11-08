@@ -20,14 +20,14 @@ It implements a **minimum viable product (MVP)** of an e-shop for outdoor clothi
 
 ## Documentation
 
-All analytical documentation, including the **business goals**, **requirements specification** and a detailed description of the diagrams presented in this README, is available in the full thesis document [`thesis.pdf`](./thesis.pdf) included in this repository.  
+All analytical documentation, including the **business goals**, **requirements specification** and a detailed description of the diagrams, some of which are presented in this README, is available in the full thesis document [`thesis.pdf`](./thesis.pdf) included in this repository.  
 
 ### Use Cases
 The diagram below shows defined use cases to briefly outline the functionalities of the developed system.
 
 <img width="1773" height="811" alt="Use-Case-Diagrams" src="https://github.com/user-attachments/assets/869625cb-d72e-4c86-8c64-4df16f137df4" />
 
----
+
 
 ### Data Model
 
@@ -35,7 +35,7 @@ To cover all defined use cases and requirements, I created a data model divided 
 
 <img width="1633" height="850" alt="Class-diagram" src="https://github.com/user-attachments/assets/92b341e9-5a68-4087-af41-c6cb2b1067c6" />
 
----
+
 
 ### Component Overview
 
@@ -43,6 +43,7 @@ The components built on top of analytical domain models, together with additiona
 are illustrated in the **component diagram** below.
 
 <img width="1164" height="721" alt="Component-diagram" src="https://github.com/user-attachments/assets/5aea72ec-1ddc-434b-a1d5-5eaf8722fe43" />
+
 
 The application consists of several backend microservices, an API Gateway, and a React/Next.js frontend.  
 Microservices provide REST APIs and are deployed together using Docker Compose.  
@@ -64,7 +65,7 @@ Each microservice follows a **multi-layered architecture** pattern.
 
 ### Backend
 - **Java 21** – Core backend language  
-- **Spring Boot 3** – Framework for building modular backends without boilerplate code  
+- **Spring Boot 3** – Framework used to develop backend
 - **Spring Security + JWT** – Authentication and authorization across services  
 - **Spring Data JPA (Hibernate)** – ORM layer for database access  
 - **PostgreSQL 17** – Relational database with separate schemas for each microservice  
