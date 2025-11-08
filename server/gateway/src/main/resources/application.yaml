@@ -1,0 +1,31 @@
+server:
+  port: 8088
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: http://user-service:8080
+          predicates:
+            - Path=/auth/**
+            - Path=/v1/**
+        - id: order-service
+          uri: http://order-service:8080
+          predicates:
+            - Path=/v1/**
+        - id: stock-service
+          uri: http://stock-service:8080
+          predicates:
+            - Path=/v1/**
+  application:
+    name: api-gateway
+
+jwt:
+  secret: ${JWT_SECRET}
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: DEBUG
