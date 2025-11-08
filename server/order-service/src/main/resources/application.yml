@@ -1,0 +1,36 @@
+server:
+  port: 8082
+  forward-headers-strategy: framework
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres_user_db
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+springdoc:
+  api-docs:
+    path: /v1/api-docs
+  swagger-ui:
+    path: /v1/swagger-ui.html
+
+jwt:
+  secret: ${JWT_SECRET}
+
+stripe:
+  secret-key: ${STRIPE_SECRET_KEY}
+  webhook-key: ${STRIPE_WEBHOOK_KEY}
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
