@@ -94,3 +94,5 @@ Each microservice follows a **multi-layered architecture** pattern.
 - **Swagger UI** – Visual documentation of API endpoints  
 
 ---
+
+[![Demo Video](https://img.youtube.com/vi/OSJdZPZTu_8/0.jpg)](https://youtu.be/OSJdZPZTu_8)
