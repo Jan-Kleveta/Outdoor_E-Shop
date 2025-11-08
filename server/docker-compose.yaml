@@ -1,0 +1,84 @@
+services:
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    networks:
+      - app-network
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      JWT_SECRET: ${JWT_SECRET}
+      APP_ADMIN_EMAIL: ${APP_ADMIN_EMAIL}
+      APP_ADMIN_PASSWORD: ${APP_ADMIN_PASSWORD}
+  order-service:
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    depends_on:
+      - db
+    networks:
+      - app-network
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      JWT_SECRET: ${JWT_SECRET}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_WEBHOOK_KEY: ${STRIPE_WEBHOOK_KEY}
+  stock-service:
+    build:
+      context: ./stock-service
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    depends_on:
+      - db
+    networks:
+      - app-network
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      JWT_SECRET: ${JWT_SECRET}
+      HOST_URL: ${HOST_URL}
+  db:
+    image: postgres:17.4
+    restart: always
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: postgres_user_db
+    command: postgres
+    networks:
+      - app-network
+  api-gateway:
+    build:
+      context: ./gateway
+    container_name: api_gateway
+    ports:
+      - "8088:8088"
+    depends_on:
+      - order-service
+      - user-service
+      - stock-service
+    networks:
+      - app-network
+    environment:
+      JWT_SECRET: ${JWT_SECRET}
+  
+networks:
+  app-network:
+    driver: bridge
+
+
