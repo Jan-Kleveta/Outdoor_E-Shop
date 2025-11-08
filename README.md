@@ -20,7 +20,7 @@ It implements a **minimum viable product (MVP)** of an e-shop for outdoor clothi
 
 ## Documentation
 
-All analytical documentation, including the **business goals**, **requirements specification** and a detailed description of the diagrams, some of which are presented in this README, is available in the full thesis document [`thesis.pdf`](./thesis.pdf) included in this repository.  
+All analytical documentation, including the **business goals**, **requirements specification** and a detailed description of the diagrams, some of which are presented in this README, is available in the full thesis document [`BachelorTheses.pdf`](./BachelorTheses.pdf) included in this repository.  
 
 ### Use Cases
 The diagram below shows defined use cases to briefly outline the functionalities of the developed system.
