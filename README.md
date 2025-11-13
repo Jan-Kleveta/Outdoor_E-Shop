@@ -25,8 +25,7 @@ All analytical documentation, including the **business goals**, **requirements s
 ### Use Cases
 The diagram below shows defined use cases to briefly outline the functionalities of the developed system.
 
-<img width="1773" height="811" alt="Use-Case-Diagrams" src="https://github.com/user-attachments/assets/869625cb-d72e-4c86-8c64-4df16f137df4" />
-
+<img width="1773" height="875" alt="image" src="https://github.com/user-attachments/assets/0084de9b-d941-4221-a8fa-be702b627184" />
 
 
 ### Data Model
