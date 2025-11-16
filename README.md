@@ -66,7 +66,7 @@ The API documentation is available at the following URLs while the system is run
 - Stock microservice: http://localhost:8088/stock/v1/swagger-ui/index.html#
 
 Preview:
-<img width="1451" height="1161" alt="image" src="https://github.com/user-attachments/assets/f5a8a678-491d-4adf-8c0b-cb9120544156" />
+<img width="700" height="580" alt="image" src="https://github.com/user-attachments/assets/f5a8a678-491d-4adf-8c0b-cb9120544156" />
 
 
 ---
