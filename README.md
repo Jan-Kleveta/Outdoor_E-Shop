@@ -90,7 +90,17 @@ Each microservice follows a **multi-layered architecture** pattern.
 - **WebStorm** – IDE used for frontend development  
 - **Git & GitHub** – Version control and repository management (Gitflow workflow)  
 - **Postman** – Manual testing of REST endpoints  
-- **Swagger UI** – Visual documentation of API endpoints  
+- **Swagger UI** – Visual documentation of API endpoints
+
+---
+
+## Prerequisites
+- Docker and Docker Compose (backend)
+- Node.js 18 or newer (frontend)
+- Stripe secret key (to communicate with Stripe)
+- Stripe webhook key (to receive Stripe webhooks)
+- Stripe CLI (to forward stripe webhooks to Docker)
+
 
 ---
 
