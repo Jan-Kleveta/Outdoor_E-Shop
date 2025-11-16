@@ -58,6 +58,17 @@ Each microservice follows a **multi-layered architecture** pattern.
 - **Client** – Represents the customer’s browser, which fetches pages from the Web Server or directly via the API Gateway during client-side rendering.  
 - **Admin Postman** – Represents the Postman tool used by the administrator for API testing and system management.
 
+### API Documentation
+
+The API documentation is available at the following URLs while the system is running:
+- User microservice: http://localhost:8088/auth/v1/swagger-ui/index.html#
+- Order microservice: http://localhost:8088/order/v1/swagger-ui/index.html#
+- Stock microservice: http://localhost:8088/stock/v1/swagger-ui/index.html#
+
+Preview:
+<img width="1451" height="1161" alt="image" src="https://github.com/user-attachments/assets/f5a8a678-491d-4adf-8c0b-cb9120544156" />
+
+
 ---
 
 ## Technologies Used
