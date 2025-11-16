@@ -77,10 +77,12 @@ Each microservice follows a **multi-layered architecture** pattern.
 ---
 
 ### Frontend
-- **Next.js 14** – Framework supporting SSR and CSR for a fast and SEO-friendly UI  
-- **React 18** – Component-based library for building dynamic user interfaces  
+- **Next.js 15.3** – Framework supporting SSR and CSR for building a fast and SEO-friendly UI  
+- **React 19** – Component-based library for building dynamic user interfaces  
 - **TypeScript** – Strong typing for maintainable and safe frontend code  
-- **TanStack** – Data fetching from the backend  
+- **TanStack Query** – Efficient data fetching and state synchronization with the backend  
+- **Zustand** – Lightweight state management for React  
+- **Swiper** – Modern and flexible carousel/slider component 
 
 ---
 
